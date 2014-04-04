@@ -5,7 +5,7 @@ boolean mouse_press;
 
 void setup() {
   size(480, 640);
-  sumaho = new Sumaho(this, "172.20.200.11"); // p5_sumaho_player ip a
+  sumaho = new Sumaho(this, "192.168.1.101"); // p5_sumaho_player ip a
   sumaho.setPublishScale(0.5f);
 }
 
