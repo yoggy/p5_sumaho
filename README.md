@@ -124,3 +124,11 @@ void draw() {
   sumaho.publish();
 }
 </pre>
+
+Libraries
+========
+p5_smaho uses the following libraries.
+
+Protocol Buffers
+* https://code.google.com/p/protobuf/
+
