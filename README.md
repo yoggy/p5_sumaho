@@ -2,10 +2,20 @@ p5_sumaho
 =========
 
 p5_sumaho is Android remote control framework library for Processsing.
+
 ![system abstract](fig01.png)
 
 see also p5_sumaho_player
 * https://github.com/yoggy/p5_sumaho_player
+
+Google Play URL
+  * https://play.google.com/store/apps/details?id=net.sabamiso.p5_sumaho_player
+
+Demo Movie
+=========
+  * http://youtu.be/RWt1vlE57-g
+  * [![ScreenShot](https://farm8.staticflickr.com/7125/13623802903_857e5497bd_m.jpg)](http://youtu.be/RWt1vlE57-g)
+  
 
 How to use
 =========
