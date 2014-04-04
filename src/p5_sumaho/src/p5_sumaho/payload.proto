@@ -1,0 +1,38 @@
+option java_package = "p5_sumaho";
+option java_outer_classname = "Payload";
+
+message Image {
+	required bytes jpeg = 1;
+}
+
+message EventType {
+	required int32 id = 1;
+}
+
+message EventTouch {
+	required int32 type = 1;
+	required int32 id   = 2;
+	required float x    = 3;
+	required float y    = 4;
+}
+
+message EventGravity {
+	required float x    = 1;
+	required float y    = 2;
+	required float z    = 3;
+}
+
+message EventMagneticField {
+	required float x    = 1;
+	required float y    = 2;
+	required float z    = 3;
+}
+
+message EventLight {
+	required float val    = 1;
+}
+
+message EventProximity {
+	required float val    = 1;
+}
+
