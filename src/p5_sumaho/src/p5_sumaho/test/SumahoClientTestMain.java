@@ -11,7 +11,6 @@ public class SumahoClientTestMain extends PApplet {
 	SampleStopWatch stop_watch;
 	Wave wave_press;
 	Wave wave_release;
-	boolean mouse_pressed = false;
 	
 	public void setup() {
 		size(480, 640);
@@ -36,7 +35,7 @@ public class SumahoClientTestMain extends PApplet {
 		wave_release.draw();
 		
 		stroke(255, 255, 255);
-		if (mouse_pressed) {
+		if (mousePressed) {
 			noStroke();			
 			fill(255, 255, 0);
 			ellipse(mouseX, mouseY, 30, 30);
@@ -60,16 +59,16 @@ public class SumahoClientTestMain extends PApplet {
 		text("sensor.proximity=" + sumaho.getSensor().getProximity(), 10, 148);
 
 		sumaho.publish();
+
+		println("mouseButton=" + mouseButton);
 	}
 	
 	public void mousePressed() {
 		wave_press.start(mouseX, mouseY);
-		mouse_pressed = true;
 	}
 	
 	public void mouseReleased() {
 		wave_release.start(mouseX, mouseY);
-		mouse_pressed = false;		
 	}
 	
 	public static void main(String[] args) {

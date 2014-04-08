@@ -12,7 +12,11 @@ public class UDPEventServer extends Thread {
 	PApplet papplet;
 	Sensor sensor;
 	int port;
-	boolean mouse_pressed = false;
+	boolean is_dragged;
+	int start_x;
+	int start_y;
+	
+	public static final int drag_distance_threshold = 16;
 	
 	DatagramSocket socket;
 	
@@ -82,21 +86,46 @@ public class UDPEventServer extends Thread {
 		// 
 		switch(type) {
 		case Event.TOUCH_DOWN:
-			mouse_pressed = true;
+			papplet.mousePressed = true;
+			papplet.mouseButton = PApplet.LEFT;
+			startDragCheck();
 			papplet.mousePressed();
 			break;
 		case Event.TOUCH_MOVE:
-			if (mouse_pressed == true) {
+			checkDrag();
+			if (is_dragged == true) {
 				papplet.mouseDragged();
 			}
 			papplet.mouseMoved();
 			break;
 		case Event.TOUCH_UP:
-			mouse_pressed = false;
+			papplet.mousePressed = false;
+			papplet.mouseButton = 0;
 			papplet.mouseReleased();
+			if (is_dragged == false) {
+				papplet.mouseClicked();
+			}
 			break;
 		default:
 			break;
 		}
 	}	
+	
+	void startDragCheck() {
+		is_dragged = false;
+		start_x = papplet.mouseX;
+		start_y = papplet.mouseY;
+	}
+	
+	void checkDrag() {
+		if (is_dragged == true) return;
+		
+		int dx = papplet.mouseX - start_x;
+		int dy = papplet.mouseY - start_y;
+		
+		double diff = Math.sqrt(dx * dx + dy * dy);
+		if (drag_distance_threshold < diff) {
+			is_dragged = true;
+		}
+	}
 }
