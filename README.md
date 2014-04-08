@@ -1,15 +1,9 @@
 p5_sumaho
 =========
 
-p5_sumaho is Android remote control framework library for Processsing.
+p5_sumaho is an Android smartphone remote control library for Processing.
 
 ![system abstract](fig01.png)
-
-see also p5_sumaho_player
-* https://github.com/yoggy/p5_sumaho_player
-
-Google Play URL
-  * https://play.google.com/store/apps/details?id=net.sabamiso.p5_sumaho_player
 
 Demo Movie
 =========
@@ -18,6 +12,50 @@ Demo Movie
   
 
 How to use
+=========
+
+1. Install p5_sumaho_player on your Android smartphone.
+  * [p5_sumaho_player](https://play.google.com/store/apps/details?id=net.sabamiso.p5_sumaho_player) (Google Play)
+
+2. Setup the Wi-Fi configuration on your Android smartphone in order to connect to the PC through the Wi-Fi network.
+
+3. Launch p5_sumaho_player on your Android smartphone.
+
+4. Install p5_sumaho library on your Processing environment.
+  * see also for manual installation... [How to Install a Contributed Library](http://wiki.processing.org/w/How_to_Install_a_Contributed_Library) (processing.org)
+
+5. Create a following sketch for Processing.
+<pre>
+  import p5_sumaho.*;
+  
+  Sumaho sumaho;
+  
+  void setup() {
+    size(480, 640);
+    
+    sumaho = new Sumaho(this, "192.168.1.101");  // p5_sumaho_player IP Address
+  
+    colorMode(HSB, 100, 100, 100);
+    background(66, 100, 100);
+  }
+  
+  void draw() {
+    // draw something ...
+    fill(frameCount % 100, 100, 100);
+    ellipse(mouseX, mouseY, 100, 100);
+  
+    // publish to p5_smaho_player  
+    sumaho.publish();
+  }
+</pre>
+
+6. Run the sketch and move the mouse pointer on the sketch. p5_sumaho_player will display the same content on the screen of the Android smartphone.
+
+7. Touch operation on the screen of the Android smartphone. Touch operation is sent to the sketch.
+
+
+
+Examples
 =========
 
 example_01_publish
