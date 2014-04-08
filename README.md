@@ -45,7 +45,7 @@ How to use
     fill(frameCount % 100, 100, 100);
     ellipse(mouseX, mouseY, 100, 100);
   
-    // publish to p5_smaho_player  
+    // publish to p5_sumaho_player  
     sumaho.publish();
   }
 </pre>
@@ -85,7 +85,7 @@ void draw() {
   fill(random(255), random(255), random(255));
   ellipse(x, y, r, r);
 
-  // publish to p5_smaho_player  
+  // publish to p5_sumaho_player  
   sumaho.publish();
 }
 </pre>
@@ -110,7 +110,7 @@ void draw() {
     ellipse(mouseX, mouseY, 50, 50);
   }
   
-  // publish to p5_smaho_player  
+  // publish to p5_sumaho_player  
   sumaho.publish();
 }
 </pre>
@@ -127,7 +127,7 @@ Sumaho sumaho;
 void setup() {
   size(480, 640);
 
-  sumaho = new Sumaho(this, "192.168.1.101"); // p5_sumaho_player ip a
+  sumaho = new Sumaho(this, "192.168.1.101"); // p5_sumaho_player ip address
 }
 
 void draw() {
@@ -144,7 +144,7 @@ void draw() {
   text("light sensor=" + l, 10, 80);
   text("proximity sensor=" + p, 10, 100);
 
-  // publish to p5_smaho_player  
+  // publish to p5_sumaho_player  
   sumaho.publish();
 }
 </pre>
