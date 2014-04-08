@@ -4,14 +4,13 @@ Sumaho sumaho;
 
 Wave wave_press;
 Wave wave_release;
-boolean mouse_press;
 
 SampleStopWatch stop_watch;
 
 void setup() {
   size(480, 640);
 
-  sumaho = new Sumaho(this, "192.168.1.101"); // p5_sumaho_player ip a
+  sumaho = new Sumaho(this, "192.168.1.101"); // p5_sumaho_player ip address
   sumaho.setPublishScale(0.5f);
 
   stop_watch = new SampleStopWatch();
@@ -31,7 +30,7 @@ void draw() {
   wave_press.draw();
   wave_release.draw();
 
-  if (mouse_press) {
+  if (mousePressed) {
     noStroke();
     fill(255, 255, 0);
     ellipse(mouseX, mouseY, 30, 30);
@@ -42,12 +41,10 @@ void draw() {
 }
 
 void mousePressed() {
-  mouse_press = true;
   wave_press.start(mouseX, mouseY);
 }
 
 void mouseReleased() {
-  mouse_press = false;
   wave_release.start(mouseX, mouseY);
 }
 

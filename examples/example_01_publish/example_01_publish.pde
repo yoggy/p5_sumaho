@@ -4,9 +4,7 @@ Sumaho sumaho;
   
 void setup() {
   size(480, 640);
-
-  sumaho = new Sumaho(this, "192.168.1.101"); // p5_sumaho_player ip a
-  sumaho.setPublishScale(1);
+  sumaho = new Sumaho(this, "192.168.1.101"); // p5_sumaho_player ip address
 }
 
 void draw() {
