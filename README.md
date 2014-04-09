@@ -1,13 +1,14 @@
 p5_sumaho
 =========
 
-p5_sumaho is an Android smartphone remote control library for Processing.
+p5_sumaho is simple remote display library for Processing.
 You can easily create a prototype for the Android using Processing.
 
 ![system abstract](fig01.png)
 
 Demo Movie
 =========
+
   * http://youtu.be/RWt1vlE57-g
   * [![ScreenShot](https://farm8.staticflickr.com/7125/13623802903_857e5497bd_m.jpg)](http://youtu.be/RWt1vlE57-g)
   
