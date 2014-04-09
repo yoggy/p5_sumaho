@@ -6,6 +6,8 @@ You can easily create a prototype for the Android using Processing.
 
 ![system abstract](fig01.png)
 
+In Japanese, smartphone are called "sumaho"(スマホ).
+
 Demo Movie
 =========
 
