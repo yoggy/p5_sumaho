@@ -2,7 +2,7 @@ p5_sumaho
 =========
 
 p5_sumaho is simple remote display library for Processing.
-You can easily create an app prototype for the Android using Processing.
+You can easily create an app prototype for Android using Processing.
 
 ![system abstract](fig01.png)
 
