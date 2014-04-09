@@ -15,7 +15,7 @@ void draw() {
     ellipse(mouseX, mouseY, 50, 50);
   }
   
-  // publish to p5_smaho_player  
+  // publish to p5_sumaho_player  
   sumaho.publish();
 }
 

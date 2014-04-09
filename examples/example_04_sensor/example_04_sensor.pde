@@ -5,7 +5,7 @@ Sumaho sumaho;
 void setup() {
   size(480, 640);
 
-  sumaho = new Sumaho(this, "192.168.1.101"); // p5_sumaho_player ip a
+  sumaho = new Sumaho(this, "192.168.1.101"); // p5_sumaho_player ip address
 }
 
 void draw() {
@@ -22,7 +22,7 @@ void draw() {
   text("light sensor=" + l, 10, 80);
   text("proximity sensor=" + p, 10, 100);
 
-  // publish to p5_smaho_player  
+  // publish to p5_sumaho_player  
   sumaho.publish();
 }
 

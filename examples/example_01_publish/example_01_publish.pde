@@ -21,7 +21,7 @@ void draw() {
   fill(random(255), random(255), random(255));
   ellipse(x, y, r, r);
 
-  // publish to p5_smaho_player  
+  // publish to p5_sumaho_player  
   sumaho.publish();
 }
 
