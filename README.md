@@ -56,7 +56,7 @@ How to use
 
 6. Run the sketch and move the mouse pointer on the sketch. p5_sumaho_player will display the same content on the screen of the Android smartphone.
 
-7. Touch operation on the screen of the Android smartphone. Touch operation is sent to the sketch.
+7. Touch the screen of the Android smartphone. Touch operation is sent to the sketch.
 
 
 
