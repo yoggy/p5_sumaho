@@ -23,6 +23,7 @@ How to use
 3. Launch p5_sumaho_player on your Android smartphone.
 
 4. Install p5_sumaho library on your Processing environment.
+  * [download library from here](https://github.com/yoggy/p5_sumaho/archive/master.zip)
   * see also for manual installation... [How to Install a Contributed Library](http://wiki.processing.org/w/How_to_Install_a_Contributed_Library) (processing.org)
 
 5. Create a following sketch for Processing.
